@@ -27,8 +27,65 @@
             href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/style.css" />
         <title>English Janala || Best Platform for learning English</title>
     </head>
-    <body class="bg-red-500 min-h-screen"></body>
+    <body>
+        <header class="mx-auto bg-info/10 shadow-sm py-4 p-0 lg:px-[87px]">
+            <div class="navbar flex justify-between">
+                <div class="navber_start">
+                    <a
+                        href="#"
+                        class="flex items-center text-lg font-semibold py-[6px] gap-1"
+                    >
+                        <span>English</span>
+                        <img src="assets/logo.png" alt="" />
+                        <span class="font_bangla font-normal">জানালা</span>
+                    </a>
+                </div>
+                <div class="navber_end flex gap-4 hidden sm:flex">
+                    <button class="btn btn-primary btn-outline">
+                        <i class="fa-solid fa-circle-question"></i>FAQ
+                    </button>
+                    <button class="btn btn-primary btn-outline">
+                        <i class="fa-solid fa-book-open"></i>Learn
+                    </button>
+                    <button class="btn btn-primary btn-outline">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i
+                        >logout
+                    </button>
+                </div>
+                <div class="menu_icon dropdown sm:hidden">
+                    <div tabindex="0" role="button" class="">
+                        <i
+                            class="fa-solid fa-bars-staggered cursor-pointer text-[20px]"
+                        ></i>
+                    </div>
+                    <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 p-2 shadow felx w-[150px] gap-2 right-0 text-[20px]"
+                    >
+                        <li>
+                            <button class="">
+                                <i class="fa-solid fa-circle-question"></i>FAQ
+                            </button>
+                        </li>
+                        <li>
+                            <button class="">
+                                <i class="fa-solid fa-book-open"></i>Learn
+                            </button>
+                        </li>
+                        <li>
+                            <button class="">
+                                <i
+                                    class="fa-solid fa-arrow-right-from-bracket"
+                                ></i
+                                >logout
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </body>
 </html>
