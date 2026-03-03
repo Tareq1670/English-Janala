@@ -142,6 +142,13 @@
                 class="flex flex-wrap gap-5 justify-center pb-2 md:pb-5"
             ></div>
         </section>
+
+        
+        <!-- Loading -->
+        <section id="loading" class="flex justify-center items-center py-10 hidden">
+            <span class="loading loading-ring loading-lg"></span>
+        </section>
+
         <!-- Lesson Select -->
         <section
             id="word_container"
@@ -157,14 +164,15 @@
             </div>
         </section>
 
+
         <dialog id="Word_modal" class="modal modal-bottom sm:modal-middle">
             <div class="modal-box">
-                <div id="modal_content">
-                    
-                </div>
+                <div id="modal_content"></div>
                 <div class="modal-action">
                     <form method="dialog">
-                        <button class="btn btn-primary">Complete Learning</button>
+                        <button class="btn btn-primary">
+                            Complete Learning
+                        </button>
                     </form>
                 </div>
             </div>

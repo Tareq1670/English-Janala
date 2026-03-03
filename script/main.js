@@ -19,6 +19,7 @@ const displayLesson = (lessons) => {
 };
 
 const loadLevelWord = (id) => {
+    manageSpniner(true)
     const url = `https://openapi.programming-hero.com/api/level/${id}`;
     fetch(url)
         .then((res) => res.json())
@@ -51,6 +52,8 @@ const displayLevelWord = (words) => {
                 </h2>
             </div>
         `;
+        manageSpniner(false)
+        return;
     }
 
     words.forEach((word) => {
@@ -83,6 +86,7 @@ const displayLevelWord = (words) => {
         `;
         wordContainer.append(card);
     });
+    manageSpniner(false)
 };
 
 const loadWordDetail = async (id) => {
@@ -114,10 +118,20 @@ const displayDetail = (words) => {
        <div class="space-y-3">
         <h2 class="text-[24px] font-semibold font_bangla">সমার্থক শব্দ গুলো</h2>
         <div class="flex space-x-2">
-    ${words.synonyms.map(word => `<button class="capitalize bg-primary/20 text-neutral border border-base-300 px-3 py-2 rounded-lg">${word}</button>`).join("")}
+    ${words.synonyms.map((word) => `<button class="capitalize bg-primary/20 text-neutral border border-base-300 px-3 py-2 rounded-lg">${word}</button>`).join("")}
   </div>
        </div>
      </div>
     `;
     document.getElementById("Word_modal").showModal();
+};
+
+const manageSpniner = (status) => {
+    if (status === true) {
+        document.getElementById("loading").classList.remove("hidden");
+        document.getElementById("word_container").classList.add("hidden");
+    } else {
+        document.getElementById("word_container").classList.remove("hidden");
+        document.getElementById("loading").classList.add("hidden");
+    }
 };
