@@ -89,23 +89,73 @@
             </div>
         </header>
         <!-- *Banner -->
-        <section class="px-1 sm:px-0 py-5 flex flex-col-reverse md:flex-row justify-between items-center container mx-auto gap-5">
+        <section
+            class="px-1 sm:px-0 py-5 flex flex-col-reverse md:flex-row justify-between items-center container mx-auto gap-5"
+        >
             <div class="content flex-1 text-center md:text-left">
-                <h2 class="text-[28px] mb-8 sm:text-[40px] lg:text-[48px] font-bold"><span class="text-info">English</span> is Easy!!</h2>
-                <p class="font_bangla max-w-[727px] text-[18px] lg:text-[24px] font-medium mb-5">
+                <h2 class="mb-8 text-[40px] lg:text-[48px] font-bold">
+                    <span class="text-info">English</span> is Easy!!
+                </h2>
+                <p
+                    class="font_bangla max-w-[727px] text-[18px] lg:text-[24px] font-medium mb-5"
+                >
                     আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন
                     অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons
                     আপনাকে নিয়ে যাবে অন্য একটি Level এ
                 </p>
-                <form action="" class="flex flex-col w-full sm:max-w-80 py-3 space-y-5 ">
-                    <input class="text-[14px] py-2 px-3 border-black/30 rounded-md outline-none" type="text" placeholder="Enter Your Name">
-                    <input class="text-[14px] py-2 px-3 border-black/30 rounded-md outline-none" type="password" placeholder="Enter Your Password">
-                    <input class="btn btn-primary w-[120px] text-[18px]" type="submit" value="Get Start">
+                <form
+                    action=""
+                    class="flex flex-col w-full sm:max-w-80 py-3 space-y-5"
+                >
+                    <input
+                        class="text-[14px] py-2 px-3 border-black/30 rounded-md outline-none"
+                        type="text"
+                        placeholder="Enter Your Name"
+                    />
+                    <input
+                        class="text-[14px] py-2 px-3 border-black/30 rounded-md outline-none"
+                        type="password"
+                        placeholder="Enter Your Password"
+                    />
+                    <input
+                        class="btn btn-primary w-[120px] text-[18px]"
+                        type="submit"
+                        value="Get Start"
+                    />
                 </form>
             </div>
             <div class="img flex-1">
-                <img src="assets/hero-student.png" alt="">
+                <img src="assets/hero-student.png" alt="" />
             </div>
         </section>
+        <!-- *Lets Learn -->
+        <section class="container mx-auto px-1 sm:px-0">
+            <h2
+                class="mt-5 md:mt-[100px] lg:mt-[200px] text-center mb-8 text-[30px] md:text-[40px] lg:text-[48px] font-bold"
+            >
+                <span class="text-info">Let's</span> learn Vocabularies
+            </h2>
+
+            <!-- Label Container -->
+            <div
+                id="level_container"
+                class="flex flex-wrap gap-5 justify-center pb-2 md:pb-5"
+            ></div>
+        </section>
+        <!-- Lesson Select -->
+        <section
+            id="word_container"
+            class="bg-base-200 container py-5 sm:py-10 px-2 sm:px-10  mx-auto my-10 rounded-3xl grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6"
+        >
+            <div class="text-center space-y-3">
+                <p class="text-[13px] text-neutral/60 font_bangla">
+                    আপনি এখনো কোন Lesson Select করেন নি ?
+                </p>
+                <h2 class="text-[34px] text-neutral font-medium font_bangla">
+                    একটি Lesson Select করুন।
+                </h2>
+            </div>
+        </section>
+        <script src="script/main.js"></script>
     </body>
 </html>
