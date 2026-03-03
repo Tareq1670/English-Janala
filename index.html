@@ -45,16 +45,16 @@
                     </a>
                 </div>
                 <div class="navber_end flex gap-4 hidden sm:flex">
-                    <button class="btn btn-primary btn-outline">
+                    <a href="" class="btn btn-primary btn-outline">
                         <i class="fa-solid fa-circle-question"></i>FAQ
-                    </button>
-                    <button class="btn btn-primary btn-outline">
+                    </a>
+                    <a href="" class="btn btn-primary btn-outline">
                         <i class="fa-solid fa-book-open"></i>Learn
-                    </button>
-                    <button class="btn btn-primary btn-outline">
+                    </a>
+                    <a href="" class="btn btn-primary btn-outline">
                         <i class="fa-solid fa-arrow-right-from-bracket"></i
                         >logout
-                    </button>
+                    </a>
                 </div>
                 <div class="menu_icon dropdown sm:hidden">
                     <div tabindex="0" role="button" class="">
@@ -67,22 +67,22 @@
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-6 p-2 shadow felx w-[150px] gap-2 right-0 text-[20px]"
                     >
                         <li>
-                            <button class="">
+                            <a href="" class="">
                                 <i class="fa-solid fa-circle-question"></i>FAQ
-                            </button>
+                            </a>
                         </li>
                         <li>
-                            <button class="">
+                            <a href="" class="">
                                 <i class="fa-solid fa-book-open"></i>Learn
-                            </button>
+                            </a>
                         </li>
                         <li>
-                            <button class="">
+                            <a href="" class="">
                                 <i
                                     class="fa-solid fa-arrow-right-from-bracket"
                                 ></i
                                 >logout
-                            </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -129,7 +129,7 @@
             </div>
         </section>
         <!-- *Lets Learn -->
-        <section class="container mx-auto px-1 sm:px-0">
+        <section id="learn" class="container mx-auto px-1 sm:px-0">
             <h2
                 class="mt-5 md:mt-[100px] lg:mt-[200px] text-center mb-8 text-[30px] md:text-[40px] lg:text-[48px] font-bold"
             >
@@ -145,7 +145,7 @@
         <!-- Lesson Select -->
         <section
             id="word_container"
-            class="bg-base-200 container py-5 sm:py-10 px-2 sm:px-10  mx-auto my-10 rounded-3xl grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6"
+            class="bg-base-200 container py-5 sm:py-10 px-2 sm:px-10 mx-auto my-10 rounded-3xl grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6"
         >
             <div class="text-center space-y-3">
                 <p class="text-[13px] text-neutral/60 font_bangla">
@@ -156,6 +156,19 @@
                 </h2>
             </div>
         </section>
+
+        <dialog id="Word_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="modal_content">
+                    
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn btn-primary">Complete Learning</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
         <script src="script/main.js"></script>
     </body>
 </html>
