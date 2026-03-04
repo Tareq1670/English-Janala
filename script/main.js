@@ -1,7 +1,9 @@
 const loadLessons = () => {
     fetch("https://openapi.programming-hero.com/api/levels/all")
         .then((res) => res.json())
-        .then((data) => displayLesson(data.data));
+        .then((data) =>{
+             displayLesson(data.data)
+        });
 };
 loadLessons();
 
@@ -19,7 +21,7 @@ const displayLesson = (lessons) => {
 };
 
 const loadLevelWord = (id) => {
-    manageSpniner(true)
+    manageSpniner(true);
     const url = `https://openapi.programming-hero.com/api/level/${id}`;
     fetch(url)
         .then((res) => res.json())
@@ -52,7 +54,7 @@ const displayLevelWord = (words) => {
                 </h2>
             </div>
         `;
-        manageSpniner(false)
+        manageSpniner(false);
         return;
     }
 
@@ -77,6 +79,7 @@ const displayLevelWord = (words) => {
                         <i class="fa-solid fa-circle-info text-[24px]"></i>
                     </button>
                     <button
+                        onclick="pronounceWord('${word.word}')"
                         class="bg-info/10 rounded-md p-4 cursor-pointer hover:bg-blue-300 transition-all duration-300 ease-in-out"
                     >
                         <i class="fa-solid fa-volume-high text-[24px]"></i>
@@ -86,7 +89,7 @@ const displayLevelWord = (words) => {
         `;
         wordContainer.append(card);
     });
-    manageSpniner(false)
+    manageSpniner(false);
 };
 
 const loadWordDetail = async (id) => {
@@ -99,7 +102,6 @@ const loadWordDetail = async (id) => {
 
 const displayDetail = (words) => {
     const modalContent = document.getElementById("modal_content");
-    console.log(words);
     modalContent.innerHTML = `
      <div class="space-y-6">
        <h2 class="text-[36px] font-bold">${words.word} (<i class="fa-solid fa-microphone-lines"></i> ${
@@ -135,3 +137,38 @@ const manageSpniner = (status) => {
         document.getElementById("loading").classList.add("hidden");
     }
 };
+
+
+
+
+document.getElementById("search_btn").addEventListener("click",()=>{
+    const input = document.getElementById("search_input");
+    const inputValue = input.value.trim().toLowerCase();
+    console.log(inputValue);
+
+    fetch("https://openapi.programming-hero.com/api/words/all")
+    .then(res=> res.json())
+    .then(data => {
+        console.log(data);
+        const allWords = data.data;
+        const filterWord = allWords.filter(item =>item.word.toLowerCase().includes(inputValue))
+        displayLevelWord(filterWord)
+    })
+    removeActive()
+    input.value = ""
+})
+
+
+document.getElementById("search_input").addEventListener("keydown",(e)=>{
+    if(e.key == "Enter"){
+        document.getElementById("search_btn").click()
+    }
+})
+
+
+
+function pronounceWord(word){
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = "en-EN";
+    window.speechSynthesis.speak(utterance);
+}

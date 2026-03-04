@@ -128,6 +128,15 @@
                 <img src="assets/hero-student.png" alt="" />
             </div>
         </section>
+
+        <!-- Loading -->
+        <section
+            id="loading_lets"
+            class="flex justify-center items-center py-10 hidden"
+        >
+            <span class="loading loading-ring loading-lg"></span>
+        </section>
+
         <!-- *Lets Learn -->
         <section id="learn" class="container mx-auto px-1 sm:px-0">
             <h2
@@ -143,9 +152,27 @@
             ></div>
         </section>
 
-        
+        <section class="container mx-auto flex justify-center">
+            <div class="join">
+                <div>
+                    <label class="input validator search-item">
+                        <input
+                            id="search_input"
+                            type="text"
+                            placeholder="Input Your Search"
+                            required
+                        />
+                    </label>
+                </div>
+                <button id="search_btn" class="btn btn-neutral search-item">Search</button>
+            </div>
+        </section>
+
         <!-- Loading -->
-        <section id="loading" class="flex justify-center items-center py-10 hidden">
+        <section
+            id="loading"
+            class="flex justify-center items-center py-10 hidden"
+        >
             <span class="loading loading-ring loading-lg"></span>
         </section>
 
@@ -163,7 +190,6 @@
                 </h2>
             </div>
         </section>
-
 
         <dialog id="Word_modal" class="modal modal-bottom sm:modal-middle">
             <div class="modal-box">
